@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<body>
+    <h1>Login into telegram account using session</h1>
+    <form action="{{ url_for('login') }}" method="POST">
+        <label for="api_id">API_ID:</label>
+        <input type="text" id="api_id" name="api_id" value="{{ default_api_id }}"><br>
+        <label for="api_hash">API_HASH:</label>
+        <input type="text" id="api_hash" name="api_hash" value="{{ default_api_hash }}"><br>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

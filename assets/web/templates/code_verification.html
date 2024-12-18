@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login code</title>
+</head>
+<body>
+    <h1>Put your login code here</h1>
+
+    {% if flash_message %}
+    <div class="alert alert-info">
+        {{ flash_message }}
+    </div>
+    {% endif %}
+
+    <form action="{{ url_for('code_verification') }}" method="POST">
+        <label for="code">Confirmation code:</label>
+        <input type="text" id="code" name="code" placeholder="Код"><br>
+        <button type="submit">Confirm</button>
+    </form>
+</body>
+</html>
